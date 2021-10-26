@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="es">
+	<head>
+		<meta charset="utf-8" />
+
+		<title>Ejemplo</title>
+
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<link href="styles.css" rel="stylesheet" />
+	</head>
+	<body>
+
+		<!-- Sharing buttons -->
+		<aside id="social_share_buttons_aside"></aside>
+			
+		<!-- Suscribirse -->
+		<form id="suscribirse_form" onsubmit="suscribirse( event, this, 'suscribirse_form', 'on_page' );">
+			<div>
+				<label>Email</label>
+				<input type="email" autocomplete="off" placeholder="Ingresa tu email" name="email" maxlength="64" required>
+			</div>
+			<button>Suscribirme</button>
+		</form>
+
+		<!-- Popup suscribirse -->
+		<div>
+			<p>Suscríbete GRATIS</p>
+			<form id="popup_suscribirse_form" onsubmit="suscribirse( event, this, 'popup_suscribirse_form', 'popup' );">
+				<div>
+					<label>Email</label>
+					<input type="email" autocomplete="off" placeholder="Ingresa tu email" name="email" maxlength="64" required>
+				</div>
+				<button type="submit">Suscribirme ahora</button>
+				<button type="button">Tal vez después</button>
+			</form>
+		</div>
+
+		<!-- Ranking stars -->
+		<div id="ranking_stars_div"></div>
+
+		<!-- Comentarios -->
+		<p>Deja un comentario</p>
+		<p>Tu dirección de email no será publicada.</p>
+		<form id="comentar_form" onsubmit="comentar( event, this );">
+			<div>
+				<label>Tu nombre</label>
+				<input type="text" autocomplete="off" placeholder="Tu nombre" name="nombre" maxlength="64" required>
+			</div>
+			<div>
+				<label>Tu email</label>
+				<input type="email" autocomplete="off" placeholder="Tu email" name="email" maxlength="64" required>
+			</div>
+			<div>
+				<label>Escribe tu comentario</label>
+				<textarea placeholder="Déjanos un comentario" name="comentario" maxlength="500" required></textarea>
+			</div>
+			<button>Publicar comentario</button>
+		</form>
+		<ul id="comentarios_list">
+			<li>Cargando...</li>
+		</ul>
+
+		<!-- Contacto -->
+		<form id="contacto_form" onsubmit="contacto( event, this );">
+			<div>
+				<label>Tu nombre</label>
+				<input type="text" autocomplete="off" placeholder="Tu nombre" name="nombre" maxlength="64" required>
+			</div>
+			<div>
+				<label>Tu email</label>
+				<input type="email" autocomplete="off" placeholder="Tu email" name="email" maxlength="64" required>
+			</div>
+			<div>
+				<label>Tu whatsapp</label>
+				<select name="codigo" id="phone_number_country_codes_select"></select>
+				<input type="tel" autocomplete="off" placeholder="Tu whatsapp" name="whatsapp" maxlength="10" required>
+			</div>
+			<div>
+				<label>Tu mensaje</label>
+				<textarea placeholder="¿En qué podemos ayudarte?" name="mensaje" maxlength="500" required></textarea>
+			</div>
+			<button>Enviar mensaje</button>
+		</form>
+
+		<!-- Cookies -->
+		<div id="cookies_div">
+			<div>
+				<i id="cookies_close_i" onclick="aceptar_cookies();"></i>
+				<p>Este sitio web utiliza "cookies" para brindarle la mejor y más relevante experiencia. El uso de este sitio web significa que está de acuerdo con esto. Obtenga más información sobre las "cookies" en nuestra <a href="" target="_blank">Política de Cookies.</a></p>
+			</div>
+		</div>
+
+		<script src="functions.js"></script>
+
+	</body>
+</html>

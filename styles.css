@@ -1,0 +1,105 @@
+:root { --bs-funciones:  url( 'img/funciones.png' ); }
+
+/* Sharing buttons  */
+#social_share_buttons_aside
+{
+	list-style: none;
+	margin-bottom: 1rem;
+	margin-top: 1rem;
+	padding-left: 0;
+	position: fixed;
+	text-align: center;
+	width: 100%;
+	z-index: 10000;
+}
+
+#social_share_buttons_aside span
+{
+	display: block;
+	height: 50px;
+	width: 50px;
+}
+
+#social_share_buttons_aside li { background: var( --bs-funciones ); }
+
+#social_share_buttons_aside li:nth-child( 1 ) { background-position: 0 0; } /* Facebook */
+
+#social_share_buttons_aside li:nth-child( 2 ) { background-position: 0 -50px; } /* Twitter */
+
+#social_share_buttons_aside li:nth-child( 3 ) { background-position: 0 -100px; } /* Linkedin */
+
+#social_share_buttons_aside li:nth-child( 4 ) { background-position: 0 -150px; } /* Pinterest */
+
+#social_share_buttons_aside li:nth-child( 5 ) { background-position: 0 -200px; } /* Email */
+
+#social_share_buttons_aside li:nth-child( 6 ) { background-position: 0 -250px; } /* Whatsapp */
+
+/* Desktop  */
+@media ( min-width: 768px ) 
+{
+	#social_share_buttons_aside 
+	{
+		left: 20px;
+		top: 85px;
+		width: 50px;
+	}
+
+	#social_share_buttons_aside li { margin-bottom: 0.35rem; }
+}
+
+/* Mobile */
+@media ( max-width: 768px ) 
+{
+	#social_share_buttons_aside { bottom: 0; }
+
+	#social_share_buttons_aside li { display: inline-block; }
+}
+
+/* Ranking stars  */
+#ranking_stars
+{
+	list-style: none;
+	padding-left: 0;
+}
+
+#ranking_stars li { display: inline-block; }
+
+#ranking_stars p 
+{
+	font-size: 1.25rem;
+	font-weight: 250;
+	line-height: 2.3rem;
+}
+
+.ranking-stars-normal 
+{
+	background: var( --bs-funciones ); /* Siempre arriba de bg-position */
+	background-position: 0 -300px;
+	cursor: pointer;
+	height: 35px;
+	width: 35px;
+}
+
+.ranking-stars-hover 
+{
+	background: var( --bs-funciones ); /* Siempre arriba de bg-position */
+	background-position: 0 -350px;
+	cursor: pointer;
+	height: 35px;
+	width: 35px;
+}
+
+/* Cookies  */
+#cookies_close_i
+{
+	-moz-transform-origin: 0 0;
+	-moz-transform:scale( 0.5 );
+	background: var( --bs-funciones ); /* Siempre arriba de bg-position */
+	background-position: 0 -400px;
+	display: block;
+	height: 50px;
+	width: 50px;
+	zoom:0.5;
+}
+
+.d-none { display: none !important; }
